@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Shopmanager</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Le styles -->
+	<link href="stylesheets/bootstrap.css" rel="stylesheet">
+	<link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+	<link href="stylesheets/1wd.css" rel="stylesheet">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/images/apple-touch-icon-114x114.png">
+</head>
+<body class="fwd">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="#">Project name</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Signin</a></li>
+						<li><a href="#about">Shop</a></li>
+						<li><a href="#contact">Kontakt</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+	<div class="container">
+	<!-- Main hero unit for a primary marketing message or call to action -->
+	<div class="hero-unit clearfix">
+	 <div class="pull-left span10">
+		  <h1><span>Welcome to ballon shop manager</span></h1>
+		<p>Shop manager for balloon creations.</p>	
+	 </div>
+	</div>
+	<div class="row">
+	 <div class="col-xs-12 main-container"></div>
+    </div>
+		<footer>
+			<p>&copy; A one shop  for balloons designers and developers</p>
+		</footer>
+		 </div>
+
+
+     
+		 <script type="text/template" id="tpl-shops">
+		  <h2 class="page-header text-center">List of ballon creations</h2>
+		  <p class="text-center">
+			<a href="#shops/new" class="btn btn-primary add-contact-btn">Add Contact</a>
+		  </p>
+		  <ul class="media-list row contacts-container"></ul>
+		</script>
+		<script type="text/template" id="tpl-shop">
+		<div class="thumbnail">
+        <img class="media-object" src="app/img/faces/<%- avatar %>">
+      </div>
+      <div class="media-heading">
+        <h3>
+          <%- title %>
+          <small>
+            <a href="#shops/edit/<%- id %>"><span class="glyphicon glyphicon-pencil edit-shop"></span></a>
+            <a href="#shops/delete/<%- id %>" class="delete-shop">
+              <span class="glyphicon glyphicon-trash"></span>
+            </a>
+          </small>
+        </h3>
+      </div>
+      <div class="media-body">
+        <dl>
+          <dt>Creations title:</dt>
+          <dd><%- title %></dd>
+          <dt>Price:</dt>
+          <dd><%- price %></dd>
+        </dl>
+      </div>
+      <hr>
+    </script>
+	<script type="text/template" id="tpl-new-shop">
+      <h2 class="page-header text-center"><%= isNew ? 'Create' : 'Edit' %> Shop</h2>
+      <form role="form" class="form-horizontal shop-form">
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Creations title:</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control shop-title-input" value="<%- title %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Price:</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control shop-price-input" value="<%- price %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Description:</label>
+          <div class="col-sm-6">
+            <input type="tel" class="form-control shop-description-input" value="<%- description %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-3">
+            <button type="submit" class="btn btn-outline btn-lg btn-block">Submit</button>
+          </div>
+          <div class="col-sm-3">
+            <a href="#shops" class="btn btn-outline btn-lg btn-block form-cancel-btn">Cancel</a>
+          </div>
+        </div>
+      </form>
+    </script>
+	
+	<script src="js/lib/jquery/jquery.js"></script>
+    <script src="js/lib/underscore/underscore.js"></script>
+    <script src="js/lib/backbone/backbone.js"></script>
+    <script src="js/lib/marionette/backbone.marionette.js"></script>
+    <script src="js/lib/Backbone.localStorage/backbone.localStorage.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/models/shop.js"></script>
+    <script src="js/collections/shops.js"></script>
+    <script src="js/views/shop.js"></script>
+    <script src="js/views/shops.js"></script>
+    <script src="js/views/shopForm.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/router.js"></script>
+
+    <script>
+      $(function() {
+        ShopManager.start();
+      });
+    </script>
+     
+</body>
+</html>

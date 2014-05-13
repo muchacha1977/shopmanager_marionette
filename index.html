@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Shopmanager</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Le styles -->
+	<link href="stylesheets/bootstrap.css" rel="stylesheet">
+	<link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+	<link href="stylesheets/1wd.css" rel="stylesheet">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/images/apple-touch-icon-114x114.png">
+</head>
+<body class="fwd">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="#">Project name</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Signin</a></li>
+						<li><a href="#about">Shop</a></li>
+						<li><a href="#contact">Kontakt</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<!-- Main hero unit for a primary marketing message or call to action -->
+	<div class="hero-unit clearfix">
+ <div class="pull-left span4">
+  <h1><span>Welcome to marvellous balloon creations </span></h1>
+ 
+  <!-- <p><a class="btn btn-info btn-large">Go to shop manager</a></p> -->
+ </div>
+ <div class="span3">
+ 	<br/>
+  <h3><span>Balloon artist Jason Hackenwerth has created such marvellous balloon creations. I never thought, the boring balloons can be remade in such beautiful ways.</span></h3>
+  <!-- <p><a class="btn btn-info btn-large">Go to shop manager</a></p> -->
+ </div>
+
+
+<!--  <div class="pull-right">
+  <form class="well">
+   <label>Username</label>
+   <input type="text" class="span3" placeholder="Type your username">
+   <label>Password</label>
+   <input type="password" class="span3" placeholder="Type your password">
+   <label class="checkbox">
+    <input type="checkbox">Remember me
+   </label>
+   <button type="submit" class="btn">Log me in</button>
+  </form>
+ </div> -->
+
+<div class="pull-right">
+  <form class="well" id="add">
+   <label>Title</label>
+   <input type="text" class="span3" placeholder="Type title of creation">
+   <label>Price</label>
+   <input type="text" class="span3" placeholder="Type price">
+   <label class="checkbox">
+
+   <button type="submit" class="btn">Save</button>
+   	<a href="#" id="clear-filter">Clear</a>
+   </label>
+  </form>
+
+ </div>
+
+</div>
+<div class="row">
+		
+		<div id="yourcart" class="span4">
+			<script type="text/javascript" id="itemTemplate">
+		<div class="thumbnail">
+		 <img alt="<%= title %>" src="img/thumb1.jpg">
+		 <div class="caption">
+		   <h5><%= title %></h5>
+		   <p>&pound;<%= price %></p>
+		   <p><a class="btn btn-primary" href="#">Read more</a></p>
+		 </div>
+		</div>
+	</div>
+	 </script>
+	<!-- <div class="span4">
+<div class="thumbnail">
+ <img alt="" src="img/ballons8.jpg">
+ <div class="caption">
+   <h5>Our Authors</h5>
+   <p>Incredible Balloon Sculptures By Jason Hackenwerth</p>
+   <p><a class="btn btn-primary" href="#">Be one of us</a> <a class="btn" href="#">See all our authors</a></p>
+ </div>
+</div>
+	</div>
+	
+    <div class="span4">
+<div class="thumbnail">
+ <img alt="" src="img/ballons7.jpg">
+ <div class="caption">
+   <h5>Our Authors</h5>
+   <p>Incredible Balloon Sculptures By Jason Hackenwerth</p>
+   <p><a class="btn btn-primary" href="#">Be one of us</a> <a class="btn" href="#">See all our authors</a></p>
+ </div>
+</div>
+  </div> -->
+  </div> 
+  <!-- /container -->
+		<footer>
+			<p>&copy; A one shop  for balloons designers and developers</p>
+		</footer>
+	    <script src="js/lib/require.js" data-main="js/app.js"></script>
+     
+</body>
+</html>
